@@ -1,0 +1,157 @@
+*{
+    margin:0;
+    padding:0;
+}
+nav{
+    height:75px;
+    width: 100%;
+    /* border:1px solid; */
+    position:relative;
+   
+    /* overflow: hidden; */
+}
+#logo{
+
+    height:40px;
+    width:200px;
+    position:absolute;
+    top:15px;
+    left:90px;
+    
+}
+#opt-nav{
+    display:flex;
+    gap:30px;
+    position: absolute;
+    left:400px;
+    top:30px;
+}
+#opt-nav>h3{
+    font-size: 17px;
+    line-height: 20px;;
+    letter-spacing: normal;
+    font-weight: 600;
+    font-style: normal;
+    text-decoration:none solid rgb(27, 36, 55);
+    color:#8292b4;
+}
+#login{
+    position:absolute;
+    right:-100px;
+    top:20px;
+}
+#login>button{
+    color:#457eff;
+    color:rgb(69, 126, 255);
+    font-size: 16px;
+    line-height: 20px;;
+    letter-spacing: normal;
+    font-weight: 600;
+    padding:8px 20px;
+    border-radius: 35px;
+    border:1px solid#457eff;;
+    display: inline;
+}
+#login :nth-last-child(1)
+{
+  border:none;
+  color:white;
+  background-color:#ff7555 ;
+}
+#employ{
+    position :absolute;
+    right:150px;
+    top:20px;
+}
+#employ>select{
+    padding:8px ;
+    border:none;
+    font-size: 16px;
+    line-height: 20px;;
+    letter-spacing: normal;
+    font-weight: 600;
+    font-style: normal;
+    text-decoration:none solid rgb(27, 36, 55);
+    color:#8292b4;
+    text-align: center;
+}
+.jobs{
+    width:800px;
+    height:250px;
+    /* border:1px solid; */
+    position:absolute;
+    top:45px;
+    left:-100px;
+    display:none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex ;
+    background-color: white;
+}
+
+#explore{
+    width:200px;
+    height:200px;
+    border-right:1px solid #a19f9d;
+    line-height: 30px;
+    color: #8292b4;
+    margin:20px 20px;
+    cursor: pointer;
+} 
+
+#location{
+    width:200px;
+    height:200px;
+    /* border-right:1px solid #a19f9d; */
+    line-height: 30px;
+    color: #8292b4;
+    margin:20px 20px;
+    cursor: pointer;
+}
+#job{
+    cursor: pointer;
+    
+}
+#location>h3:nth-child(1)
+{
+    color:rgba(0, 0, 0, 0.616);
+}
+#explore>h3:nth-child(1)
+{
+    color:rgba(0, 0, 0, 0.616);
+}
+
+.company{
+    width:800px;
+    height:250px;
+    /* border:1px solid; */
+    position:absolute;
+    top:45px;
+    left:-100px;
+    display:none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex ;
+    background-color: white;
+    
+}
+#comp{
+    cursor:pointer;
+}
+#Services{
+    cursor:pointer;
+}
+.service{
+    width:800px;
+    height:250px;
+    position:absolute;
+    top:45px;
+    left:-100px;
+    display:none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex ;
+    background-color: white;
+}
+
+button{
+    cursor: pointer;
+}
+

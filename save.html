@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT JOBS</title>
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/it.css">
+    <style>
+      #fil{
+        display: flex;
+        width:300px;
+        border:1px solid transparent;
+        margin:30px;
+        box-shadow: 1px 1px 5px grey;
+      }
+      #filimg{
+        margin-right:15px;
+        margin-left:70px;
+      }
+      .loc{
+        border:1px solid transparent;
+        padding:30px;
+      }
+      #sub{
+        width:100px;
+        font-size: 15px;
+        font-weight: 300;
+        background-color: #3167ff;
+        color:white;
+        border:transparent;
+        line-height: 20px;
+        padding:4px;
+        border-radius: 5px;
+        margin-top: 20px;
+      }
+      #loc>input{
+        margin-top:10px;
+      }
+      #sor{
+       display: flex;
+       gap:10px;
+       width:100%;
+       text-align: center;
+       justify-content: space-around;
+      }
+
+      #div1{
+        height:240px;
+      }
+
+      #fold{
+        color:
+#536777;
+color:
+rgb(83, 103, 119);
+line-height: normal;
+font-size: 12px;
+font-weight: 400;
+text-decoration:
+none solid rgb(83, 103, 119);
+font-family :
+Roboto, sans-serif;
+position:absolute;
+bottom:25px;
+left:20px;
+      }
+    </style>
+
+</head>
+<body>
+    <nav id="pav">
+
+    </nav>
+    <div id="bk">
+        <div id="bk1">
+          <div id="sor">
+           <h3>SORT BY SALARY:</h3>
+           <select name="/" id="getsort" onchange="sortit(event)">
+             <option value="low">LOW TO HIGH</option>
+             <option value="high">HIGH TO LOW</option>
+           </select>
+          </div>
+         <div id="fil">
+           <img width="22px" id="filimg" src="./images/filter.png" >
+           <h2>All Filters</h2>
+         </div>
+         <div class="loc">
+           <h3>By Location :</h3><br>
+           
+           <input type="checkbox" name="nagpur" id="nagpur"  />
+          <label for="nagpur" > Nagpur</label><br />
+          <input type="checkbox" name="Amravati" id="Amravati" />
+          <label for="Amravati"> Amravati</label><br />
+          <input type="checkbox" name="gurugaon" id="gurugaon" />
+          <label for="gurugaon"> Gurugaon</label><br />
+          <input type="checkbox" name="noida" id="noida" />
+          <label for="gurugaon"> Noida</label><br />
+           <button onclick="check(event)" id="sub">Submit</button>
+         </div>
+         
+         <div class="loc">
+          <h3>By Company :</h3><br>
+           
+          <input type="checkbox" name="tcs" id="tcs"  />
+         <label for="tcs" > Tata Consulty Services</label><br />
+         <input type="checkbox" name="MDS" id="MDS" />
+         <label for="MDS"> MDS Facilities</label><br />
+         <input type="checkbox" name="coal" id="coal" />
+         <label for="coal"> COAL India</label><br />
+         <input type="checkbox" name="victor" id="victor" />
+         <label for="victor"> Victorious Infotech Pvt. Ltd</label><br />
+          <button onclick="gocomp(event)" id="sub">Submit</button>
+
+          
+
+         </div>
+
+
+
+
+
+        </div>
+        <div id="bk2">
+          
+        </div>
+        <div id="bk3">
+            <img src="./images/job1.png" >
+            <img src="./images/job2.png">
+        </div>
+    </div>
+    
+    
+</body>
+</html>
+<script type="module">
+     let pav = document.getElementById("pav");
+    import nav from "./scripts/expor.js"
+    pav.innerHTML=nav();
+
+    window.onload=function clod()
+{
+    let jobs=document.querySelector(".jobs");
+  jobs.style.display="none";
+  let company=document.querySelector(".company");
+  company.style.display="none";
+  let service=document.querySelector(".service");
+  service.style.display="none";
+}
+
+let job = document.getElementById("job");
+job.addEventListener("mousemove",find)
+function find()
+{
+    let company=document.querySelector(".company");
+  company.style.display="none";
+  let jobs=document.querySelector(".jobs");
+  jobs.style.display="flex";
+  let service=document.querySelector(".service");
+  service.style.display="none";
+}
+let jobs=document.querySelector(".jobs");
+jobs.addEventListener("mouseover",find)
+jobs.addEventListener("mouseout",ded);
+function ded()
+{
+    let company=document.querySelector(".company");
+  company.style.display="none";
+    let jobs=document.querySelector(".jobs");
+  jobs.style.display="none";
+  let service=document.querySelector(".service");
+  service.style.display="none";
+}
+
+// --------------------------------------------
+
+let comp = document.getElementById("comp");
+comp.addEventListener("mousemove",find1)
+
+let company=document.querySelector(".company");
+company.addEventListener("mouseover",find1)
+company.addEventListener("mouseout",ded1);
+
+function ded1()
+{
+    let jobs=document.querySelector(".jobs");
+  jobs.style.display="none";
+    let company=document.querySelector(".company");
+  company.style.display="none";
+  let service=document.querySelector(".service");
+  service.style.display="none";
+}
+function find1()
+{
+    let jobs=document.querySelector(".jobs");
+  jobs.style.display="none";
+  let service=document.querySelector(".service");
+  service.style.display="none";
+
+  let company=document.querySelector(".company");
+  company.style.display="flex";
+}
+
+// --------------------------------------------
+let Services = document.getElementById("Services");
+Services.addEventListener("mousemove",find2)
+
+let service=document.querySelector(".service");
+service.addEventListener("mouseover",find2)
+service.addEventListener("mouseout",ded2);
+
+function ded2()
+{
+    let jobs=document.querySelector(".jobs");
+  jobs.style.display="none";
+    let company=document.querySelector(".company");
+  company.style.display="none";
+  let service=document.querySelector(".service");
+  service.style.display="none";
+  
+}
+function find2()
+{
+    let jobs=document.querySelector(".jobs");
+  jobs.style.display="none";
+
+  let company=document.querySelector(".company");
+  company.style.display="none";
+  let service=document.querySelector(".service");
+  service.style.display="flex";
+}
+</script>
+<script src="./scripts/navbar.js">
+</script>
+<script src="./scripts/save.js">
+</script>
+<script>
+
+function sortit(event)
+{
+  event.preventDefault();
+  document.getElementById("bk2").innerHTML=null;
+  let lo = document.getElementById("getsort").value;
+  
+  if(lo=="low")
+  {
+    jobarr.sort(function(a,b)
+    {
+      return a.id-b.id;
+    })
+    }
+    if(lo=="high")
+    {
+      jobarr.sort(function(a,b)
+      {
+        return b.id-a.id;
+      })
+    }
+    jobbhar(jobarr);
+  }
+
+
+
+</script>
